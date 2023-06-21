@@ -38,10 +38,27 @@ VALUES
 
 SELECT * FROM gatitos;
 
+
 ALTER TABLE gatitos
   ALTER COLUMN apodo SET DEFAULT 'no tiene';
 
 UPDATE gatitos SET apodo = default WHERE apodo IS NULL;
+
+ALTER TABLE gatitos ALTER COLUMN apodo DROP DEFAULT;
+
+ALTER TABLE gatitos ALTER COLUMN apodo SET DEFAULT NULL;
+
+UPDATE gatitos SET apodo = NULL WHERE apodo = 'no tiene';
+
+
+
+
+
+
+
+
+
+
 
 
 
