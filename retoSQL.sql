@@ -73,6 +73,17 @@ ALTER TABLE gatitos MODIFY años_jubilacion BOOLEAN AFTER edad;
 
 UPDATE gatitos SET años_jubilacion = 11 - edad;
 
+INSERT INTO gatitos (nombre, apodo, edad, peso,gustos, descripcion, color, ojos)
+VALUES ('Toffee', 'Tofisito', 4, 3.4, 'jugar y estar solo a veces', NULL, 'blanco con gris', 'verdosos');
+
+INSERT INTO gatitos (nombre, apodo, edad, peso, gustos, descripcion, color, ojos)
+VALUES ('Chucky', NULL, 10, 4.3, 'dormir y caminar', NULL, 'naranja con blanco', 'amarillentos');
+
+UPDATE gatitos SET dieta = (peso > 4);
+
+UPDATE gatitos SET años_jubilacion = 11 - edad;
+
+
 
 
 
