@@ -26,14 +26,22 @@ SHOW TABLES;
 
 INSERT INTO gatitos (Nombre, Apodo,Edad, Peso, Gustos, Descripcion, Color, Ojos)
 VALUES
-  ('Rocket','NULL', 3, 3.0, 'le gusta dormir mucho', 'llego junto con Sunny', 'blanco', 'celestes'),
-  ('Pinto','Pin', 5, 3.5, 'le gustan los mimos', 'NULL', 'naranja con blanco', 'amarillo con verde'),
-  ('Sunny','NULL', 2, 5.0, 'le encanta jugar con pelotitas', 'NULL', 'negro', 'amarillentos'),
+  ('Rocket',NULL, 3, 3.0, 'le gusta dormir mucho', 'llego junto con Sunny', 'blanco', 'celestes'),
+  ('Pinto','Pin', 5, 3.5, 'le gustan los mimos', NULL, 'naranja con blanco', 'amarillo con verde'),
+  ('Sunny',NULL, 2, 5.0, 'le encanta jugar con pelotitas', NULL, 'negro', 'amarillentos'),
   ('Emelia','Emeli', 5, 4.4, 'le encanta reposar donde hay sol', 'llego junto con Seiko', 'gris con negro', 'amarillentos'),
-  ('Nikki','NULL', 4, 4.3, 'no se despega de Ricochet', 'NULL', 'gris', 'verdes claros'),
-  ('Ricochet','NULL', 4, 4.7, 'le gustan los lugares altos', 'NULL', 'blanco con gris', 'celestes'),
-  ('Onyx','NULL', 7, 3.3, 'va donde hay comida', 'NULL', 'naranja con marron', 'amarillentos'),
-  ('Seiko','NULL', 2, 3.7, 'le gusta dormir junto a otros gatos', 'NULL', 'blanco con gris', 'verdosos'),
-  ('Nathan','Ninja nate',7, 4.5, 'le encanta esconderse', 'NULL', 'negro', 'amarillentos');
+  ('Nikki',NULL, 4, 4.3, 'no se despega de Ricochet', NULL, 'gris', 'verdes claros'),
+  ('Ricochet',NULL, 4, 4.7, 'le gustan los lugares altos', NULL, 'blanco con gris', 'celestes'),
+  ('Onyx',NULL, 7, 3.3, 'va donde hay comida', NULL, 'naranja con marron', 'amarillentos'),
+  ('Seiko',NULL, 2, 3.7, 'le gusta dormir junto a otros gatos', NULL, 'blanco con gris', 'verdosos'),
+  ('Nathan','Ninja nate',7, 4.5, 'le encanta esconderse', NULL, 'negro', 'amarillentos');
 
 SELECT * FROM gatitos;
+
+ALTER TABLE gatitos
+  ALTER COLUMN apodo SET DEFAULT 'no tiene';
+
+UPDATE gatitos SET apodo = default WHERE apodo IS NULL;
+
+
+
