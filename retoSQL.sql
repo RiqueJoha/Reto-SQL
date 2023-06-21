@@ -61,6 +61,16 @@ ALTER TABLE gatitos ALTER COLUMN descripcion SET DEFAULT NULL;
 
 UPDATE gatitos SET descripcion = NULL WHERE descripcion = 'llega solito';
 
+ALTER TABLE gatitos ADD COLUMN dieta BOOLEAN;
+
+ALTER TABLE gatitos MODIFY dieta BOOLEAN AFTER peso;
+
+UPDATE gatitos SET dieta = (peso > 4);
+
+
+
+
+
 
 
 
