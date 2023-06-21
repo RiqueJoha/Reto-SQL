@@ -55,6 +55,12 @@ ALTER TABLE gatitos
 
 UPDATE gatitos SET descripcion = default WHERE descripcion IS NULL;
 
+ALTER TABLE gatitos ALTER COLUMN descripcion DROP DEFAULT;
+
+ALTER TABLE gatitos ALTER COLUMN descripcion SET DEFAULT NULL;
+
+UPDATE gatitos SET descripcion = NULL WHERE descripcion = 'llega solito';
+
 
 
 
