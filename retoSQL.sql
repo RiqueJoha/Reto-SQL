@@ -67,6 +67,12 @@ ALTER TABLE gatitos MODIFY dieta BOOLEAN AFTER peso;
 
 UPDATE gatitos SET dieta = (peso > 4);
 
+ALTER TABLE gatitos ADD COLUMN años_jubilacion INT;
+
+ALTER TABLE gatitos MODIFY años_jubilacion BOOLEAN AFTER edad;
+
+UPDATE gatitos SET años_jubilacion = 11 - edad;
+
 
 
 
