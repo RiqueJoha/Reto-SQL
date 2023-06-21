@@ -50,6 +50,11 @@ ALTER TABLE gatitos ALTER COLUMN apodo SET DEFAULT NULL;
 
 UPDATE gatitos SET apodo = NULL WHERE apodo = 'no tiene';
 
+ALTER TABLE gatitos
+  ALTER COLUMN descripcion SET DEFAULT 'llega solito';
+
+UPDATE gatitos SET descripcion = default WHERE descripcion IS NULL;
+
 
 
 
