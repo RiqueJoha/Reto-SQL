@@ -113,10 +113,23 @@ UPDATE gatitos SET dieta = (peso > 4);
 UPDATE gatitos SET años_jubilacion = 11 - edad;
 
 ALTER TABLE gatitos
- ALTER COLUMN apodo SET DEFAULT 'no tiene';
-
+ALTER COLUMN apodo SET DEFAULT 'no tiene';
 UPDATE gatitos SET apodo = default WHERE apodo IS NULL;
 
+ALTER TABLE gatitos
+ ALTER COLUMN dieta SET DEFAULT (peso > 4); 
+
+UPDATE gatitos SET dieta = DEFAULT;
+
+ALTER TABLE gatitos
+ ALTER COLUMN años_jubilacion SET DEFAULT (11 - edad);
+
+UPDATE gatitos SET años_jubilacion = DEFAULT;
+
+
+ALTER TABLE gatitos ALTER COLUMN descripcion SET DEFAULT 'llega solito';
+
+UPDATE gatitos SET descripcion = DEFAULT WHERE descripcion is NULL;
 
 
 
