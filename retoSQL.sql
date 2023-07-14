@@ -112,6 +112,10 @@ UPDATE gatitos SET dieta = (peso > 4);
 
 UPDATE gatitos SET años_jubilacion = 11 - edad;
 
+ALTER TABLE gatitos
+ ALTER COLUMN apodo SET DEFAULT 'no tiene';
+
+UPDATE gatitos SET apodo = default WHERE apodo IS NULL;
 
 
 
